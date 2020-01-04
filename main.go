@@ -17,12 +17,12 @@ func main() {
 	promoutersLowerBound := 9
 	detractorsUpperBound := 6
 
-	for i:=0;i<len(scores) ;i++  {
-		if scores[i] >= promoutersLowerBound {
+	for _, value := range scores{
+		if value >= promoutersLowerBound {
 			promoters++
 		}
 
-		if scores[i] <= detractorsUpperBound {
+		if value <= detractorsUpperBound {
 			detractors++
 		}
 	}
