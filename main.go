@@ -9,6 +9,9 @@ func main() {
 	score2:=7
 	score3:=10
 
+
+
+
 	promoters :=0
 	detractors :=0
 
