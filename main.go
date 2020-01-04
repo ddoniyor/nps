@@ -5,12 +5,7 @@ import "fmt"
 //main + Tag - live templates
 func main() {
 
-	score1:=10
-	score2:=7
-	score3:=10
-
-
-
+	scores := [3]int{10,7,10}
 
 	promoters :=0
 	detractors :=0
@@ -22,29 +17,16 @@ func main() {
 	promoutersLowerBound := 9
 	detractorsUpperBound := 6
 
-	if score1 >= promoutersLowerBound {
-		promoters++
-	}
+	for i:=0;i<len(scores) ;i++  {
+		if scores[i] >= promoutersLowerBound {
+			promoters++
+		}
 
-
-	if score1 <= detractorsUpperBound {
-		detractors++
+		if scores[i] <= detractorsUpperBound {
+			detractors++
+		}
 	}
-	if score2 >= promoutersLowerBound {
-		promoters++
-	}
-
-	if score2 <= detractorsUpperBound {
-		detractors++
-	}
-	if score3 >= promoutersLowerBound {
-		promoters++
-	}
-
-	if score3 <= detractorsUpperBound {
-		detractors++
-	}
-	nps:=(promoters-detractors)*100/3
+	nps:=(promoters-detractors)*100/len(scores)
 	fmt.Println(nps)
 }
 
